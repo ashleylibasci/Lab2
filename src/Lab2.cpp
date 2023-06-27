@@ -16,12 +16,13 @@ void setup()
 {
   Serial.begin(9600);
   pinMode(D5, OUTPUT);
+  pinMode(A5, INPUT);
 }
 
 void loop()
 {
   value = analogRead(A5);
-  Serial.println(A5);
+  Serial.println(value);
 
   digitalWrite(D5, HIGH);
   delay(value);
